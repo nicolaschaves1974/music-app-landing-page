@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-waves {
+    width: auto;
+    max-width: 300px;
+    height: 60px;
+}
+.logo-link {
+    display: flex;      
+    align-items: center; 
+    gap: 12px;            
+    text-decoration: none;
+}
+.logo-text {
+    color: white;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; 
+    padding: 0 30px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px; 
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease;
+}
+nav ul a:hover {
+  color: #3473D9;
+}
+header {
+  background-color: #0F1720;
+}
+
+.hero-section {
+  background-image: url('../img/pogo.jpg');
+background-size: 70%; 
+  background-position: 100% 100%; 
+  padding: 100px 0 30px;
+  min-height: 90vh;
+  position: relative; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  background: linear-gradient(
+    to right, 
+    #1C1C2D 32%,  
+    rgba(28, 28, 45, 0.7) 60%, 
+    transparent 100%        
+  );
+
+}
+.hero-text-content h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.hero-text-content p {
+  font-family: 'Lato', sans-serif; 
+  font-size: 20px; 
+  font-weight: 400; 
+  opacity: 0.9;
+  margin-bottom: 30px; 
+  line-height: 1.6;
+  animation: fadeInUp 0.7s ease-out forwards;
+  animation-delay: 0.3s; 
+  opacity: 0; 
+}
+.hero-text-content {
+  max-width: 550px; 
+  text-align: left; 
+  margin-left: 5%; 
+  position: relative;
+  z-index: 2; 
+  color: white; 
+}
+.hero-cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #1C1C2D;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  transition: scale 0.2s ease;
+  animation: fadeInUp 0.7s ease-out forwards;
+  animation-delay: 0.6s; 
+  opacity: 0; 
+}
+.hero-cta-button:hover {
+  scale: 1.05; 
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+}
+.burger-menu .line {
+    width: 23px;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+}
+nav {
+  position: relative;
+}
+.album-carousel-section {
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+}
+.album-carousel-section h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.carousel-container {
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  gap: 60px;
+  transition: transform 0.5s ease-in-out;
+}
+.album-card {
+  flex: 0 0 auto;
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #333;
+  height: 200px;
+}
+.album-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.carousel-button {
+  position: absolute;
+  top: 176px;
+  transform: translateY(-50%);
+  z-index: 5;
+  background-color: transparent;
+  color: white;
+  border: none;
+  opacity: 0.5;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.carousel-button:hover {
+  opacity: 1; 
+}
+
+.carousel-button.prev {
+  left: -22px; 
+}
+.carousel-button.next {
+  right: -22px; 
+}
+.carousel-button svg {
+  width: 45px;
+  height: 45px;
+}
+.explore-more-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222; 
+  border: 1px dashed #555; 
+  transition: background-color 0.2s;
+}
+.explore-more-card a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+.explore-more-card:hover {
+  background-color: #333;
+}
+.album-card {
+  position: relative;
+  cursor: pointer;
+}
+.card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-artist {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+.album-card:hover .card-info {
+  opacity: 1;
+}
+
+.plans-section {
+  background: linear-gradient(to top, #000000 0%, #1C1C2D 100%);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.plans-content-wrapper {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex; 
+  gap: 60px; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+
+.benefits-column {
+  flex: 1; 
+  min-width: 300px; 
+  text-align: left;
+}
+
+.benefits-column h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.benefits-column ul {
+  list-style: none; 
+  padding: 0;
+}
+
+.benefits-column ul li {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: flex; 
+  align-items: center;
+  gap: 15px; 
+  line-height: 1.4;
+}
+
+.benefits-column ul li i {
+  font-size: 20px;
+  color: #6A5ACD; 
+  width: 28px; 
+  text-align: center;
+  flex-shrink: 0; 
+}
+
+.plans-column {
+  flex: 1.2; 
+  min-width: 320px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+}
+
+.plan-card {
+  background-color: #1C1C2D; 
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex; 
+  flex-direction: column;
+}
+
+.plan-card.highlight { 
+  background-color: #2D2D44; 
+  border: 2px solid #6A5ACD; 
+}
+
+.plan-card h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.plan-card .price {
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #6A5ACD; 
+  margin-bottom: 25px;
+}
+
+.plan-card .features-list {
+  flex-grow: 1; 
+  margin-bottom: 10px;
+  text-align: left; 
+}
+
+.plan-card .features-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-card .features-list ul li {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px; 
+}
+
+.plan-card .features-list ul li::before {
+  content: "—";
+  color: #6A5ACD; 
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.plan-cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #1C1C2D;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 100%; 
+  margin-top: auto; 
+}
+
+.plan-cta-button:hover {
+  background-color: #6A5ACD;
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+
+  .container-header {
+    padding: 0 20px; 
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 150px;
+    height: auto;
+    background-color: #1C1C2D;
+    transform: scale(0.95) translateY(-10px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top right;
+  }
+  nav ul.nav-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto; 
+  }
+  nav ul a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+.logo-text {
+    font-size: 18px;
+}
+.logo-waves {
+    height: 42px;
+}
+.logo-link {
+    gap: 8px;
+}
+.burger-menu {
+    display: flex;
+}
+
+.hero-section {
+  background-image: none;
+  background: linear-gradient(180deg, #1C1C2D 50%, #141f3e 100%);
+  min-height: 70vh;
+}
+.hero-section::before {
+  display: none;
+}
+.hero-text-content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+
+.hero-text-content h1 {
+  font-size: 38px;
+}
+
+.hero-text-content p {
+  font-size: 18px;
+  max-width: 100%;
+  margin: 0 auto 30px auto;
+}
+
+.carousel-wrapper {
+  width: 100%;
+}
+.carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track{
+  gap: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.album-card {
+  scroll-snap-align: start;
+  width: 160px;
+  height: 160px;
+}
+.explore-more-card {
+  width: 160px;
+  height: 160px;
+  }
+.carousel-button {
+  display: none !important;
+  }
+  .album-carousel-section h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 32px; 
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+.plans-content-wrapper {
+  flex-direction: column;
+  gap: 20px;
+}
+.benefits-column h2 {
+font-size: 32px;
+}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
